@@ -1,0 +1,8 @@
+ota/.output/
+ota/driver/.output/
+ota/user/.output/
+bin/upgrade/*.S
+bin/upgrade/*.dump
+*.o
+rtos_sniffer/build/*
+rtos_snifferbackup/build/*

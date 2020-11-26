@@ -1,0 +1,48 @@
+menu "Example Configuration"
+
+config CHANNEL
+    int "Channel"
+    range 1 13
+    default 1
+
+config FILTER_MASK_MGMT
+    bool "Receive management packets"
+    default y
+
+config FILTER_MASK_CTRL
+    bool "Receive ctrl packets"
+    default n
+
+config FILTER_MASK_DATA
+    bool "Receive data packets"
+    default n
+
+config FILTER_MASK_DATA_FRAME_PAYLOAD
+    depends on FILTER_MASK_DATA
+    bool "Receive data frame payload"
+    default n
+    help
+        Select this option to enable recv data frame payload
+
+config FILTER_MASK_MISC
+    bool "Receive misc packets"
+    default n
+
+	choice ESP_POWER_SAVE_MODE
+        prompt "power save mode"
+        default EXAMPLE_POWER_SAVE_MIN_MODEM
+        help
+            Power save mode for the esp8266 to use. Modem sleep mode includes minimum and maximum power save modes.
+            In minimum/maximum power save mode, station wakes up every DTIM to receive beacon. Broadcast data will not be
+            lost because it is transmitted after DTIM. However, it can not save much more power if DTIM is short
+            for DTIM is determined by AP.
+
+        config EXAMPLE_POWER_SAVE_NONE
+            bool "none"
+        config EXAMPLE_POWER_SAVE_MIN_MODEM
+            bool "minimum modem"
+        config EXAMPLE_POWER_SAVE_MAX_MODEM
+            bool "maximum modem"
+    endchoice
+
+endmenu

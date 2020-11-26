@@ -1,0 +1,5 @@
+source "D:/code/esp32-idf/components/app_update/Kconfig.projbuild"
+source "D:/code/esp32-idf/components/bootloader/Kconfig.projbuild"
+source "D:/code/esp32-idf/components/esptool_py/Kconfig.projbuild"
+source "D:/code/findu-master/rtos_location/main/Kconfig.projbuild"
+source "D:/code/esp32-idf/components/partition_table/Kconfig.projbuild"

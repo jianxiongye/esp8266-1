@@ -1,0 +1,19 @@
+--cpu Cortex-M4.fp
+"..\obj\startup_stm32f429xx.o"
+"..\obj\main.o"
+"..\obj\usart.o"
+"..\obj\sys.o"
+"..\obj\delay.o"
+"..\obj\wayz.o"
+"..\obj\zlog.o"
+"..\obj\cjson.o"
+"..\obj\lcd.o"
+"..\obj\ltdc.o"
+"..\obj\led.o"
+"..\obj\usart3.o"
+"..\obj\timer.o"
+"..\obj\sdram.o"
+--nodebug --strict --scatter "..\OBJ\firstProject.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "..\OBJ\firstProject.map" -o ..\OBJ\firstProject.axf

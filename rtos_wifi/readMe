@@ -1,0 +1,13 @@
+this is a rtos v3.3 project althrough in nonos file folder
+
+before compile we need download the rtos environment and config toolchain
+
+please refer to esp or https://www.cnblogs.com/dzlua/p/11194343.html
+
+compile : 
+make -j4
+
+download:
+make flash
+
+2020-5-13 initial version for rtos sniffer function complete by zaki
